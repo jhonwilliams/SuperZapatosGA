@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.Web", "SuperZapatos.Web\SuperZapatos.Web.csproj", "{1D419091-7013-4D46-BF73-1716BA259CA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.WebAPI", "SuperZapatos.WebAPI\SuperZapatos.WebAPI.csproj", "{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.Model", "SuperZapatos.Model\SuperZapatos.Model.csproj", "{5D615AA9-2423-4C87-8092-58CF5D062D64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1D419091-7013-4D46-BF73-1716BA259CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D419091-7013-4D46-BF73-1716BA259CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D419091-7013-4D46-BF73-1716BA259CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D615AA9-2423-4C87-8092-58CF5D062D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D615AA9-2423-4C87-8092-58CF5D062D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D615AA9-2423-4C87-8092-58CF5D062D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D615AA9-2423-4C87-8092-58CF5D062D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
