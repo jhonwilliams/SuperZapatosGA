@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbSuperZapatosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="ARTICLE_ID" />
+    </Key>
+    <Property Name="ARTICLE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
+    <Property Name="PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_IN_SHELF" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_IN_VAULT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="STORE_ID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Stores">
+    <Key>
+      <PropertyRef Name="STORE_ID" />
+    </Key>
+    <Property Name="STORE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Articles_Stores">
+    <End Role="Stores" Type="Self.Stores" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Articles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="STORE_ID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="STORE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbSuperZapatosModelStoreContainer">
+    <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stores" EntityType="Self.Stores" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Articles_Stores" Association="Self.FK_Articles_Stores">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

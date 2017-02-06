@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SuperZapatos.Model.Article>
+
+
+@{
+    ViewBag.Title = "Articles";
+}
+
+<h2>Articles</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTAL_IN_SHELF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TOTAL_IN_VAULT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Store.NAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTAL_IN_SHELF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TOTAL_IN_VAULT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Store.NAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ARTICLE_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ARTICLE_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ARTICLE_ID })
+        </td>
+    </tr>
+}
+
+</table>

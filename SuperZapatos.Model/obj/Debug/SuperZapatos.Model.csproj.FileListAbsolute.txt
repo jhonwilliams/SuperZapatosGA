@@ -1,0 +1,10 @@
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\SuperZapatos.Model.dll.config
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\SuperZapatos.Model.dll
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\SuperZapatos.Model.pdb
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\EntityFramework.dll
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\EntityFramework.xml
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\obj\Debug\SuperZapatos.Model.csprojResolveAssemblyReference.cache
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\obj\Debug\SuperZapatos.Model.dll
+C:\Users\Wmunoz\Documents\Visual Studio 2015\Projects\Git\SuperZapatosGA\SuperZapatos.Model\obj\Debug\SuperZapatos.Model.pdb

@@ -1,0 +1,66 @@
+﻿@model SuperZapatos.Model.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TOTAL_IN_SHELF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TOTAL_IN_SHELF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TOTAL_IN_VAULT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TOTAL_IN_VAULT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Store.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Store.NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ARTICLE_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
