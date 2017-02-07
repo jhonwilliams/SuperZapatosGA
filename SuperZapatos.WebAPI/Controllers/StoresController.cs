@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using SuperZapatos.Models;
+using SuperZapatos.Models.DTO;
+using System;
 using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using SuperZapatos.Models;
-using SuperZapatos.Models.DTO;
 
 namespace SuperZapatos.WebAPI.Controllers
 {
@@ -22,15 +17,15 @@ namespace SuperZapatos.WebAPI.Controllers
         {
 
             var storesList = (from c in db.Stores
-                          select new StoreDTO
-                          {
-                              STORE_ID = c.STORE_ID,
-                              NAME = c.NAME,
-                              ADDRESS = c.ADDRESS
-                          }
+                              select new StoreDTO
+                              {
+                                  STORE_ID = c.STORE_ID,
+                                  NAME = c.NAME,
+                                  ADDRESS = c.ADDRESS
+                              }
                           ).ToList();
 
-            return Ok( new { stores = storesList, success = true, total_elements = storesList.Count });
+            return Ok(new { stores = storesList, success = true, total_elements = storesList.Count });
         }
 
         // GET: api/Stores/5
@@ -40,13 +35,15 @@ namespace SuperZapatos.WebAPI.Controllers
             Store store = db.Stores.Find(id);
             if (store == null)
             {
-                return NotFound();
+                return Ok(new { error_msg = "Record not found", error_code = 404, success = false });
+
             }
-            else {
-               
+            else
+            {
+                return Ok(new { stores = store, success = true });
             }
 
-            return Ok(new { stores = store, success = true });
+
         }
 
     }

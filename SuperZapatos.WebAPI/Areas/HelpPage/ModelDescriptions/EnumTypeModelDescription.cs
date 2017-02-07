@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace SuperZapatos.WebAPI.Areas.HelpPage.ModelDescriptions

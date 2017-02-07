@@ -1,8 +1,8 @@
+using SuperZapatos.WebAPI.Areas.HelpPage.ModelDescriptions;
+using SuperZapatos.WebAPI.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using SuperZapatos.WebAPI.Areas.HelpPage.ModelDescriptions;
-using SuperZapatos.WebAPI.Areas.HelpPage.Models;
 
 namespace SuperZapatos.WebAPI.Areas.HelpPage.Controllers
 {

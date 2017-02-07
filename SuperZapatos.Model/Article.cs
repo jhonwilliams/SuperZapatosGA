@@ -10,8 +10,7 @@
 namespace SuperZapatos.Models
 {
     using System;
-    using System.Collections.Generic;
-    
+
     public partial class Article
     {
         public System.Guid ARTICLE_ID { get; set; }
