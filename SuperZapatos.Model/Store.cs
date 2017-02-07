@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SuperZapatos.Model
+namespace SuperZapatos.Models
 {
     using System;
     using System.Collections.Generic;

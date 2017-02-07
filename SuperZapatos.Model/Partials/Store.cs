@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperZapatos.Model.Partials
+namespace SuperZapatos.Models.Partials
 {
     [MetadataType(typeof(StoreMetadata))]
     public partial class Store

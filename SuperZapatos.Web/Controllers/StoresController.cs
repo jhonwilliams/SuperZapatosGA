@@ -6,13 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using SuperZapatos.Model;
+using SuperZapatos.Models;
 
 namespace SuperZapatos.Web.Controllers
 {
     public class StoresController : Controller
     {
-        private SuperZapatos.Model.SuperZapatos db = new SuperZapatos.Model.SuperZapatos();
+        private SuperZapatos.Models.SuperZapatos db = new SuperZapatos.Models.SuperZapatos();
 
         // GET: Stores
         public ActionResult Index()

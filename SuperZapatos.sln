@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.Web", "SuperZa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.WebAPI", "SuperZapatos.WebAPI\SuperZapatos.WebAPI.csproj", "{CBDF9FAB-BBEF-4666-9BE4-95669F7B153C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.Model", "SuperZapatos.Model\SuperZapatos.Model.csproj", "{5D615AA9-2423-4C87-8092-58CF5D062D64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos.Models", "SuperZapatos.Model\SuperZapatos.Models.csproj", "{5D615AA9-2423-4C87-8092-58CF5D062D64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

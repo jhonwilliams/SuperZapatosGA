@@ -316,9 +316,9 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SuperZapatos.Model\SuperZapatos.Model.csproj">
+    <ProjectReference Include="..\SuperZapatos.Model\SuperZapatos.Models.csproj">
       <Project>{5d615aa9-2423-4c87-8092-58cf5d062d64}</Project>
-      <Name>SuperZapatos.Model</Name>
+      <Name>SuperZapatos.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
