@@ -21,16 +21,14 @@ namespace SuperZapatos.Web.Controllers
             var articles = db.Articles.Include(a => a.Store);
             ViewBag.STORE_ID = new SelectList(db.Stores, "STORE_ID", "NAME");
             return View(articles.ToList());
-            //return View(articles.ToList());
         }
 
-        public ActionResult Filterable(Guid? STORE_ID) {
-
-            //var articles = db.Articles.Include(a => a.Store);
+        public ActionResult Filterable(Guid? STORE_ID)
+        {
             var articles = from a in db.Articles.Where(a => a.STORE_ID == STORE_ID)
                            select a;
             ViewBag.STORE_ID = new SelectList(db.Stores, "STORE_ID", "NAME");
-            
+
             return View(articles);
         }
 

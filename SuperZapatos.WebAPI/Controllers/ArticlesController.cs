@@ -35,14 +35,26 @@ namespace SuperZapatos.WebAPI.Controllers
         [ResponseType(typeof(Article))]
         public IHttpActionResult GetArticle(Guid id)
         {
-            Article article = db.Articles.Find(id);
-            if (article == null)
+            var articlesList = (from a in db.Articles.Where(a => a.ARTICLE_ID == id)
+                                select new ArticleDTO
+                                {
+                                    ARTICLE_ID = a.ARTICLE_ID,
+                                    NAME = a.NAME,
+                                    DESCRIPTION = a.DESCRIPTION,
+                                    PRICE = a.PRICE,
+                                    TOTAL_IN_SHELF = a.TOTAL_IN_SHELF,
+                                    TOTAL_IN_VAULT = a.TOTAL_IN_VAULT,
+                                    STORE_ID = a.STORE_ID
+                                }
+                       ).ToList();
+
+            if (articlesList == null)
             {
                 return Ok(new { error_msg = "Record not found", error_code = 404, success = false });
             }
             else
             {
-                return Ok(new { articles = article, success = true });
+                return Ok(new { articles = articlesList, success = true });
             }
         }
     }

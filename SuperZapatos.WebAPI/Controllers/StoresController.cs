@@ -32,15 +32,24 @@ namespace SuperZapatos.WebAPI.Controllers
         [ResponseType(typeof(Store))]
         public IHttpActionResult GetStore(Guid id)
         {
-            Store store = db.Stores.Find(id);
-            if (store == null)
+            var storesList = (from c in db.Stores.Where(a => a.STORE_ID == id)
+                              select new StoreDTO
+                              {
+                                  STORE_ID = c.STORE_ID,
+                                  NAME = c.NAME,
+                                  ADDRESS = c.ADDRESS
+                              }
+                           ).ToList();
+
+
+            if (storesList == null)
             {
                 return Ok(new { error_msg = "Record not found", error_code = 404, success = false });
 
             }
             else
             {
-                return Ok(new { stores = store, success = true });
+                return Ok(new { stores = storesList, success = true });
             }
 
 
