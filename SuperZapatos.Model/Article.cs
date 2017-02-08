@@ -10,15 +10,16 @@
 namespace SuperZapatos.Models
 {
     using System;
-
+    using System.Collections.Generic;
+    
     public partial class Article
     {
         public System.Guid ARTICLE_ID { get; set; }
         public string NAME { get; set; }
         public string DESCRIPTION { get; set; }
-        public Nullable<decimal> PRICE { get; set; }
-        public Nullable<decimal> TOTAL_IN_SHELF { get; set; }
-        public Nullable<decimal> TOTAL_IN_VAULT { get; set; }
+        public Nullable<int> PRICE { get; set; }
+        public Nullable<int> TOTAL_IN_SHELF { get; set; }
+        public Nullable<int> TOTAL_IN_VAULT { get; set; }
         public Nullable<System.Guid> STORE_ID { get; set; }
     
         public virtual Store Store { get; set; }

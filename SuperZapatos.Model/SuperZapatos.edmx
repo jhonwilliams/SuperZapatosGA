@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbSuperZapatosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dbSuperZapatosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Articles">
           <Key>
             <PropertyRef Name="ARTICLE_ID" />
@@ -12,9 +12,9 @@
           <Property Name="ARTICLE_ID" Type="uniqueidentifier" Nullable="false" />
           <Property Name="NAME" Type="varchar" MaxLength="50" />
           <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
-          <Property Name="PRICE" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="TOTAL_IN_SHELF" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="TOTAL_IN_VAULT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PRICE" Type="int" />
+          <Property Name="TOTAL_IN_SHELF" Type="int" />
+          <Property Name="TOTAL_IN_VAULT" Type="int" />
           <Property Name="STORE_ID" Type="uniqueidentifier" />
         </EntityType>
         <EntityType Name="Stores">
@@ -45,8 +45,7 @@
             <End Role="Articles" EntitySet="Articles" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbSuperZapatosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -57,9 +56,9 @@
           <Property Name="ARTICLE_ID" Type="Guid" Nullable="false" />
           <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="DESCRIPTION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="PRICE" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="TOTAL_IN_SHELF" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="TOTAL_IN_VAULT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PRICE" Type="Int32" />
+          <Property Name="TOTAL_IN_SHELF" Type="Int32" />
+          <Property Name="TOTAL_IN_VAULT" Type="Int32" />
           <Property Name="STORE_ID" Type="Guid" />
           <NavigationProperty Name="Store" Relationship="Self.FK_Articles_Stores" FromRole="Articles" ToRole="Stores" />
         </EntityType>
