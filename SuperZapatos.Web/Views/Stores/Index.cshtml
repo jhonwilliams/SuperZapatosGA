@@ -32,9 +32,9 @@
             @Html.DisplayFor(modelItem => item.ADDRESS)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.STORE_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.STORE_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.STORE_ID })
+            <a href="@Url.Action("Edit","Stores",new { id=item.STORE_ID } )"><img src="~/Content/images/edit.png" /></a>
+            <a href="@Url.Action("Details","Stores",new { id=item.STORE_ID } )"><img src="~/Content/images/details.png" /></a>
+            <a href="@Url.Action("Delete","Stores",new { id=item.STORE_ID } )"><img src="~/Content/images/delete.png" /></a>
         </td>
     </tr>
 }

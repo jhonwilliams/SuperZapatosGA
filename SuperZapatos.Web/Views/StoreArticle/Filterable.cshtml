@@ -1,15 +1,28 @@
 ﻿@model IEnumerable<SuperZapatos.Models.Article>
 
-
 @{
-    ViewBag.Title = "Articles";
+    ViewBag.Title = "Filterable";
 }
 
-<h2>Articles</h2>
+<h2>Filterable</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm("Filterable", "StoreArticle", FormMethod.Get))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.STORE_ID, "STORE_ID", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.DropDownList("STORE_ID", null, htmlAttributes: new { @class = "form-control" })
+
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Search" class="btn btn-primary " />
+            </div>
+        </div>
+    </div>
+
+}
+
 <table class="table">
     <tr>
         <th>
@@ -27,9 +40,7 @@
         <th>
             @Html.DisplayNameFor(model => model.TOTAL_IN_VAULT)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Store.NAME)
-        </th>
+
         <th></th>
     </tr>
 
@@ -51,13 +62,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TOTAL_IN_VAULT)
             </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.Store.NAME)
-            </td>
-            <td>
-                <a href="@Url.Action("Edit","Articles",new { id=item.ARTICLE_ID } )"><img src="~/Content/images/edit.png" /></a>
-                <a href="@Url.Action("Details","Articles",new { id=item.ARTICLE_ID } )"><img src="~/Content/images/details.png" /></a>
-                <a href="@Url.Action("Delete","Articles",new { id=item.ARTICLE_ID } )"><img src="~/Content/images/delete.png" /></a>
+                <a href="@Url.Action("Edit","Filterable",new { id=item.STORE_ID } )"><img src="~/Content/images/edit.png" /></a>
+                <a href="@Url.Action("Details","Filterable",new { id=item.STORE_ID } )"><img src="~/Content/images/details.png" /></a>
+                <a href="@Url.Action("Delete","Filterable",new { id=item.STORE_ID } )"><img src="~/Content/images/delete.png" /></a>
             </td>
         </tr>
     }
